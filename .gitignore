@@ -1,0 +1,49 @@
+# Binaries
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output of the go coverage tool
+*.out
+coverage.html
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local configuration
+.potus/config.local.yaml
+.potus/settings.json
+
+# Session database
+*.db
+*.db-journal
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+for-ai/
+.claude/
+auth.json
