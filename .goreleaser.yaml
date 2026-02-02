@@ -87,26 +87,28 @@ release:
 
     ### What's Changed
 
-brews:
-  - name: potus
-    repository:
-      owner: taaha3244
-      name: homebrew-tap
-    homepage: https://github.com/taaha3244/potus
-    description: "Power Of The Universal Shell - AI Coding Agent"
-    license: MIT
-    install: |
-      bin.install "potus"
-    test: |
-      system "#{bin}/potus", "--version"
+# Homebrew tap - create github.com/taaha3244/homebrew-tap first
+# brews:
+#   - name: potus
+#     repository:
+#       owner: taaha3244
+#       name: homebrew-tap
+#     homepage: https://github.com/taaha3244/potus
+#     description: "Power Of The Universal Shell - AI Coding Agent"
+#     license: MIT
+#     install: |
+#       bin.install "potus"
+#     test: |
+#       system "#{bin}/potus", "--version"
 
-scoop:
-  bucket:
-    owner: taaha3244
-    name: scoop-bucket
-  homepage: https://github.com/taaha3244/potus
-  description: "Power Of The Universal Shell - AI Coding Agent"
-  license: MIT
+# Scoop bucket - create github.com/taaha3244/scoop-bucket first
+# scoop:
+#   bucket:
+#     owner: taaha3244
+#     name: scoop-bucket
+#   homepage: https://github.com/taaha3244/potus
+#   description: "Power Of The Universal Shell - AI Coding Agent"
+#   license: MIT
 
 nfpms:
   - id: potus
@@ -122,41 +124,11 @@ nfpms:
       - apk
     bindir: /usr/bin
 
-dockers:
-  - image_templates:
-      - "ghcr.io/taaha3244/potus:{{ .Version }}-amd64"
-      - "ghcr.io/taaha3244/potus:latest-amd64"
-    use: buildx
-    dockerfile: Dockerfile
-    build_flag_templates:
-      - "--platform=linux/amd64"
-      - "--label=org.opencontainers.image.title={{ .ProjectName }}"
-      - "--label=org.opencontainers.image.description=Power Of The Universal Shell - AI Coding Agent"
-      - "--label=org.opencontainers.image.version={{ .Version }}"
-      - "--label=org.opencontainers.image.created={{ .Date }}"
-      - "--label=org.opencontainers.image.source=https://github.com/taaha3244/potus"
-
-  - image_templates:
-      - "ghcr.io/taaha3244/potus:{{ .Version }}-arm64"
-      - "ghcr.io/taaha3244/potus:latest-arm64"
-    use: buildx
-    goarch: arm64
-    dockerfile: Dockerfile
-    build_flag_templates:
-      - "--platform=linux/arm64"
-      - "--label=org.opencontainers.image.title={{ .ProjectName }}"
-      - "--label=org.opencontainers.image.description=Power Of The Universal Shell - AI Coding Agent"
-      - "--label=org.opencontainers.image.version={{ .Version }}"
-      - "--label=org.opencontainers.image.created={{ .Date }}"
-      - "--label=org.opencontainers.image.source=https://github.com/taaha3244/potus"
-
-docker_manifests:
-  - name_template: ghcr.io/taaha3244/potus:{{ .Version }}
-    image_templates:
-      - ghcr.io/taaha3244/potus:{{ .Version }}-amd64
-      - ghcr.io/taaha3244/potus:{{ .Version }}-arm64
-
-  - name_template: ghcr.io/taaha3244/potus:latest
-    image_templates:
-      - ghcr.io/taaha3244/potus:latest-amd64
-      - ghcr.io/taaha3244/potus:latest-arm64
+# Docker builds disabled - enable when QEMU is set up in CI
+# dockers:
+#   - image_templates:
+#       - "ghcr.io/taaha3244/potus:{{ .Version }}-amd64"
+#     use: buildx
+#     dockerfile: Dockerfile
+#     build_flag_templates:
+#       - "--platform=linux/amd64"

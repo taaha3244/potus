@@ -20,28 +20,25 @@ An open-source, provider-agnostic AI coding assistant for your terminal. POTUS b
 go install github.com/taaha3244/potus/cmd/potus@latest
 ```
 
-### Using Homebrew (macOS/Linux)
-
-```bash
-brew tap taaha3244/potus
-brew install potus
-```
-
 ### Download Binary
 
 Download the latest release for your platform from [GitHub Releases](https://github.com/taaha3244/potus/releases):
 
 ```bash
 # macOS (Apple Silicon)
-curl -fsSL https://github.com/taaha3244/potus/releases/latest/download/potus-darwin-arm64.tar.gz | tar -xz
+curl -fsSL https://github.com/taaha3244/potus/releases/latest/download/potus_Darwin_arm64.tar.gz | tar -xz
 sudo mv potus /usr/local/bin/
 
 # macOS (Intel)
-curl -fsSL https://github.com/taaha3244/potus/releases/latest/download/potus-darwin-amd64.tar.gz | tar -xz
+curl -fsSL https://github.com/taaha3244/potus/releases/latest/download/potus_Darwin_x86_64.tar.gz | tar -xz
 sudo mv potus /usr/local/bin/
 
 # Linux (amd64)
-curl -fsSL https://github.com/taaha3244/potus/releases/latest/download/potus-linux-amd64.tar.gz | tar -xz
+curl -fsSL https://github.com/taaha3244/potus/releases/latest/download/potus_Linux_x86_64.tar.gz | tar -xz
+sudo mv potus /usr/local/bin/
+
+# Linux (arm64)
+curl -fsSL https://github.com/taaha3244/potus/releases/latest/download/potus_Linux_arm64.tar.gz | tar -xz
 sudo mv potus /usr/local/bin/
 ```
 
